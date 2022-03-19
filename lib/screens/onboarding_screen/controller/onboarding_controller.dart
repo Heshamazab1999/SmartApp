@@ -1,4 +1,4 @@
-import 'package:education_app/components/page-view_model.dart';
+import 'package:education_app/components/page_view_model.dart';
 import 'package:education_app/controller/base_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

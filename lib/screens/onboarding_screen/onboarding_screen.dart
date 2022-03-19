@@ -1,4 +1,4 @@
-import 'package:education_app/components/page-view_model.dart';
+import 'package:education_app/components/page_view_model.dart';
 import 'package:education_app/components/register_button.dart';
 import 'package:education_app/constants.dart';
 import 'package:education_app/screens/onboarding_screen/controller/onboarding_controller.dart';
