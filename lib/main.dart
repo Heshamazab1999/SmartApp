@@ -1,4 +1,5 @@
-import 'package:education_app/screens/onboarding_screen/onboarding_screen.dart';
+import 'package:education_app/routes/app_route.dart';
+import 'package:education_app/routes/app_screens.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -12,13 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  ScreenUtilInit(
+    return ScreenUtilInit(
         designSize: const Size(375, 812),
-    minTextAdapt: true,
-    splitScreenMode: true,
-    builder: () => const GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: OnBoardingScreen(),
-    ));
+        minTextAdapt: true,
+        splitScreenMode: true,
+        builder: () => GetMaterialApp(
+              debugShowCheckedModeBanner: false,
+              initialRoute: AppRoute.onBoardingScreen,
+              getPages: AppScreens.screens,
+            ));
   }
 }

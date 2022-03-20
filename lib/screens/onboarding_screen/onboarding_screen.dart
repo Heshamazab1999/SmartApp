@@ -1,6 +1,8 @@
 import 'package:education_app/components/page_view_model.dart';
 import 'package:education_app/components/register_button.dart';
 import 'package:education_app/constants.dart';
+import 'package:education_app/routes/app_route.dart';
+import 'package:education_app/screens/login_screen/login_screen.dart';
 import 'package:education_app/screens/onboarding_screen/controller/onboarding_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -53,7 +55,10 @@ class OnBoardingScreen extends StatelessWidget {
                     ? RegisterButton(
                         color: K.secondaryColor,
                         label: "Login",
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => const LoginScreen(),
+                              transition: Transition.fade);
+                        },
                       )
                     : GestureDetector(
                         onTap: () {
@@ -100,8 +105,9 @@ class OnBoardingScreen extends StatelessWidget {
                         fontWeight: FontWeight.w500),
                   ),
                 )
-          //
+              //
               : Container()),
+          box(),
           box()
         ],
       ),
