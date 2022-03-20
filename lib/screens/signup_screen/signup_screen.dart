@@ -1,17 +1,20 @@
 import 'package:education_app/components/custom_text_field.dart';
 import 'package:education_app/components/login_button.dart';
 import 'package:education_app/components/rich_text.dart';
+import 'package:education_app/components/rich_text_signup.dart';
 import 'package:education_app/constants.dart';
-import 'package:education_app/screens/signup_screen/signup_screen.dart';
+import 'package:education_app/screens/login_screen/login_screen.dart';
+import 'package:education_app/screens/signup_screen/controller/signup_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final _controller = Get.put(SignupController());
     return Scaffold(
       backgroundColor: K.mainColor,
       body: Padding(
@@ -31,7 +34,7 @@ class LoginScreen extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 24, left: 16),
-                  child: Text("Welcome Back",
+                  child: Text("Welcome!",
                       style: TextStyle(
                           fontSize: 28.sp,
                           fontWeight: FontWeight.w500,
@@ -39,11 +42,47 @@ class LoginScreen extends StatelessWidget {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16, left: 16),
-                  child: Text("Sign in to continue",
+                  child: Text("Sign up to continue",
                       style: TextStyle(
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w500,
                           color: K.greyColor)),
+                ),
+                CustomTextField(
+                  label: "Full Name",
+                  type: TextInputType.emailAddress,
+                  icon: Icons.person_outline_outlined,
+                  obSecure: false,
+                  onchange: (v) {
+                    print(v);
+                  },
+                ),
+                CustomTextField(
+                  label: "Academic year",
+                  type: TextInputType.emailAddress,
+                  icon: Icons.person_outline_outlined,
+                  obSecure: false,
+                  onchange: (v) {
+                    print(v);
+                  },
+                ),
+                CustomTextField(
+                  label: "City",
+                  type: TextInputType.emailAddress,
+                  icon: Icons.add_location,
+                  obSecure: false,
+                  onchange: (v) {
+                    print(v);
+                  },
+                ),
+                CustomTextField(
+                  label: "City",
+                  type: TextInputType.emailAddress,
+                  icon: Icons.add_location,
+                  obSecure: false,
+                  onchange: (v) {
+                    print(v);
+                  },
                 ),
                 CustomTextField(
                   label: "Email",
@@ -63,40 +102,39 @@ class LoginScreen extends StatelessWidget {
                     print(v);
                   },
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 16, right: 16),
-                  child: Align(
-                    alignment: Alignment.bottomRight,
-                    child: GestureDetector(
-                      onTap: () {},
-                      child: Text("Forgot Your Password?",
-                          style: TextStyle(
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w500,
-                              color: K.greyColor)),
-                    ),
-                  ),
+                Row(
+                  children: [
+                    Obx(() => Checkbox(
+                          value: _controller.check,
+                          onChanged: (v) {
+                            _controller.checkFun(v!);
+                          },
+                          activeColor: K.secondaryColor,
+                          checkColor: K.whiteColor,
+                        )),
+                    const FixedRichTextSignup()
+                  ],
                 ),
                 Center(
                   child: Padding(
-                    padding: EdgeInsets.only(top: 40.h),
+                    padding: EdgeInsets.only(top: 20.h),
                     child: LoginButton(
                       onTap: () {},
-                      label: "Login",
+                      label: "Create account",
                     ),
                   ),
                 ),
-                SizedBox(height: 252.h),
+                SizedBox(height: 20.h),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: FixedRichText(
                     onTap: () {
-                      Get.to(() => const SignUpScreen(),
+                      Get.to(() => const LoginScreen(),
                           transition: Transition.zoom,
                           duration: const Duration(milliseconds: 500));
                     },
                     leftLabel: "Don't have an account? ",
-                    rightLabel: "SignUp",
+                    rightLabel: "Login",
                   ),
                 ),
               ],

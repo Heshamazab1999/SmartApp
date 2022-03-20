@@ -35,6 +35,7 @@ class CustomTextField extends StatelessWidget {
           prefixIcon: Icon(icon, color: K.greyColor),
           labelText: label,
           labelStyle: TextStyle(
+
               fontSize: 16.sp,
               fontWeight: FontWeight.w500,
               color: const Color(0xff8E8E93)),

@@ -1,9 +1,9 @@
 import 'package:education_app/components/page_view_model.dart';
 import 'package:education_app/components/register_button.dart';
 import 'package:education_app/constants.dart';
-import 'package:education_app/routes/app_route.dart';
 import 'package:education_app/screens/login_screen/login_screen.dart';
 import 'package:education_app/screens/onboarding_screen/controller/onboarding_controller.dart';
+import 'package:education_app/screens/signup_screen/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -57,14 +57,17 @@ class OnBoardingScreen extends StatelessWidget {
                         label: "Login",
                         onTap: () {
                           Get.to(() => const LoginScreen(),
-                              transition: Transition.fade);
+                              transition: Transition.zoom,
+                              duration: const Duration(milliseconds: 500));
                         },
                       )
                     : GestureDetector(
                         onTap: () {
-                          // if (_controller.isFirst.value) {
-                          //   Get.offAll(const LoginScreen());
-                          // }
+                          if (_controller.isFirst.value) {
+                            Get.offAll(const LoginScreen(),
+                                transition: Transition.zoom,
+                                duration: const Duration(milliseconds: 500));
+                          }
                         },
                         child: Text(
                           "Skip",
@@ -74,7 +77,11 @@ class OnBoardingScreen extends StatelessWidget {
                 Obx(() => _controller.isLast.value
                     ? RegisterButton(
                         color: const Color(0xFFC5C5C5),
-                        onTap: () {},
+                        onTap: () {
+                          Get.to(() => const SignUpScreen(),
+                              transition: Transition.zoom,
+                              duration: const Duration(milliseconds: 500));
+                        },
                         label: "SignUp",
                       )
                     : ElevatedButton(
