@@ -18,6 +18,7 @@ class LoginButton extends StatelessWidget {
             style: TextStyle(
                 color: K.whiteColor,
                 fontSize: 18.sp,
+                fontFamily: "Raleway",
                 fontWeight: FontWeight.w500)),
         style: TextButton.styleFrom(
             backgroundColor: K.secondaryColor,

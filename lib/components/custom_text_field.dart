@@ -30,12 +30,12 @@ class CustomTextField extends StatelessWidget {
         obscureText: obSecure!,
         cursorColor: K.blackColor,
         style: TextStyle(
-            color: K.blackColor, fontSize: 14.sp, fontWeight: FontWeight.w500),
+            color: K.blackColor, fontSize: 14.sp, fontFamily: "Raleway", fontWeight: FontWeight.w500),
         decoration: InputDecoration(
           prefixIcon: Icon(icon, color: K.greyColor),
           labelText: label,
           labelStyle: TextStyle(
-
+              fontFamily: "Raleway",
               fontSize: 16.sp,
               fontWeight: FontWeight.w500,
               color: const Color(0xff8E8E93)),

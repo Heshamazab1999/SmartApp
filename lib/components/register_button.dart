@@ -19,9 +19,13 @@ class RegisterButton extends StatelessWidget {
         child: Text(label!,
             style: TextStyle(
                 color: K.whiteColor,
+                fontFamily: "Raleway",
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w500)),
-        style: TextButton.styleFrom(backgroundColor: color),
+        style: TextButton.styleFrom(
+            backgroundColor: color,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10))),
       ),
     );
   }

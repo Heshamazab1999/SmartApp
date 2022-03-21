@@ -25,7 +25,8 @@ Widget pageViewScreen(BoardingModel model) => Column(
           style: TextStyle(
               fontSize: 28.sp,
               fontWeight: FontWeight.w500,
-              color: K.whiteColor),
+              color: K.whiteColor,
+              fontFamily: "Raleway"),
           textAlign: TextAlign.center,
         ),
         SizedBox(
@@ -35,6 +36,7 @@ Widget pageViewScreen(BoardingModel model) => Column(
           model.description!,
           style: TextStyle(
               fontSize: 18.sp,
+              fontFamily: "Raleway",
               fontWeight: FontWeight.w500,
               color: K.whiteColor),
           textAlign: TextAlign.center,

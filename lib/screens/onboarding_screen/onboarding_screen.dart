@@ -63,16 +63,15 @@ class OnBoardingScreen extends StatelessWidget {
                       )
                     : GestureDetector(
                         onTap: () {
-                          if (_controller.isFirst.value) {
                             Get.offAll(const LoginScreen(),
                                 transition: Transition.zoom,
                                 duration: const Duration(milliseconds: 500));
-                          }
+
                         },
                         child: Text(
                           "Skip",
                           style:
-                              TextStyle(fontSize: 18.sp, color: K.whiteColor),
+                              TextStyle(fontSize: 18.sp, color: K.whiteColor, fontFamily: "Raleway"),
                         ))),
                 Obx(() => _controller.isLast.value
                     ? RegisterButton(
@@ -109,6 +108,7 @@ class OnBoardingScreen extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 18.sp,
                         color: K.whiteColor,
+                        fontFamily: "Raleway",
                         fontWeight: FontWeight.w500),
                   ),
                 )

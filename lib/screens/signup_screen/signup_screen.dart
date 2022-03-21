@@ -37,6 +37,7 @@ class SignUpScreen extends StatelessWidget {
                   child: Text("Welcome!",
                       style: TextStyle(
                           fontSize: 28.sp,
+                          fontFamily: "Raleway",
                           fontWeight: FontWeight.w500,
                           color: K.blackColor)),
                 ),
@@ -45,6 +46,7 @@ class SignUpScreen extends StatelessWidget {
                   child: Text("Sign up to continue",
                       style: TextStyle(
                           fontSize: 18.sp,
+                          fontFamily: "Raleway",
                           fontWeight: FontWeight.w500,
                           color: K.greyColor)),
                 ),

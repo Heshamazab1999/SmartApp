@@ -1,5 +1,4 @@
 import 'package:education_app/constants.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -15,6 +14,7 @@ class FixedRichTextSignup extends StatelessWidget {
             text: "I Agree with ",
             style: TextStyle(
                 fontSize: 14.sp,
+                fontFamily: "Raleway",
                 fontWeight: FontWeight.w500,
                 color: const Color(0xff8E8E93)),
             children: [
@@ -22,6 +22,7 @@ class FixedRichTextSignup extends StatelessWidget {
             text: "Privacy",
             style: TextStyle(
                 fontSize: 14.sp,
+                fontFamily: "Raleway",
                 color: K.blackColor,
                 decoration: TextDecoration.underline),
           ),
@@ -29,6 +30,7 @@ class FixedRichTextSignup extends StatelessWidget {
             text: " and ",
             style: TextStyle(
               fontSize: 14.sp,
+                fontFamily: "Raleway",
               color: const Color(0xff8E8E93),
             ),
           ),
@@ -37,6 +39,7 @@ class FixedRichTextSignup extends StatelessWidget {
             style: TextStyle(
                 fontSize: 14.sp,
                 color: K.blackColor,
+                fontFamily: "Raleway",
                 decoration: TextDecoration.underline),
           ),
         ]));

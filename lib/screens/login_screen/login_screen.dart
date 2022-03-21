@@ -2,6 +2,7 @@ import 'package:education_app/components/custom_text_field.dart';
 import 'package:education_app/components/login_button.dart';
 import 'package:education_app/components/rich_text.dart';
 import 'package:education_app/constants.dart';
+import 'package:education_app/screens/home_screen/home_screen.dart';
 import 'package:education_app/screens/signup_screen/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -34,13 +35,16 @@ class LoginScreen extends StatelessWidget {
                   child: Text("Welcome Back",
                       style: TextStyle(
                           fontSize: 28.sp,
+                          fontFamily: "Raleway",
                           fontWeight: FontWeight.w500,
                           color: K.blackColor)),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16, left: 16),
                   child: Text("Sign in to continue",
+
                       style: TextStyle(
+                          fontFamily: "Raleway",
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w500,
                           color: K.greyColor)),
@@ -72,6 +76,7 @@ class LoginScreen extends StatelessWidget {
                       child: Text("Forgot Your Password?",
                           style: TextStyle(
                               fontSize: 14.sp,
+                              fontFamily: "Raleway",
                               fontWeight: FontWeight.w500,
                               color: K.greyColor)),
                     ),
@@ -81,7 +86,11 @@ class LoginScreen extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.only(top: 40.h),
                     child: LoginButton(
-                      onTap: () {},
+                      onTap: () {
+                        Get.to(() => const HomeScreen(),
+                            transition: Transition.zoom,
+                            duration: const Duration(milliseconds: 500));
+                      },
                       label: "Login",
                     ),
                   ),

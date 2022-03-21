@@ -20,11 +20,12 @@ class FixedRichText extends StatelessWidget {
             style: TextStyle(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w500,
+                fontFamily: "Raleway",
                 color: K.greyColor),
             children: [
           TextSpan(
               text: rightLabel,
-              style:  TextStyle(fontSize: 14.sp, color: K.secondaryColor),
+              style:  TextStyle(fontSize: 14.sp,  fontFamily: "Raleway",color: K.secondaryColor),
               recognizer: TapGestureRecognizer()..onTap = onTap)
         ]));
   }

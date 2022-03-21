@@ -33,6 +33,8 @@ dependencies:
   flutter_svg: ^1.0.3
   smooth_page_indicator: ^1.0.0+2
   flutter_screenutil: ^5.3.1
+  staggered_grid_view_flutter: ^0.0.4
+  youtube_player_flutter: ^8.0.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
@@ -67,7 +69,7 @@ flutter:
   fonts:
     - family: Raleway
       fonts:
-        - asset: assets/fonts/Raleway-VariableFont_wght.ttf
+        - asset: assets/fonts/Raleway-Medium.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
