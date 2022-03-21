@@ -78,15 +78,6 @@ class SignUpScreen extends StatelessWidget {
                   },
                 ),
                 CustomTextField(
-                  label: "City",
-                  type: TextInputType.emailAddress,
-                  icon: Icons.add_location,
-                  obSecure: false,
-                  onchange: (v) {
-                    print(v);
-                  },
-                ),
-                CustomTextField(
                   label: "Email",
                   type: TextInputType.emailAddress,
                   icon: Icons.email_outlined,
