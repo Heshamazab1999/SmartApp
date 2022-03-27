@@ -1,4 +1,5 @@
 import 'package:education_app/routes/app_route.dart';
+import 'package:education_app/screens/details_screen/details_screen.dart';
 import 'package:education_app/screens/home_screen/home_screen.dart';
 import 'package:education_app/screens/login_screen/login_screen.dart';
 import 'package:education_app/screens/onboarding_screen/onboarding_screen.dart';
@@ -14,5 +15,6 @@ class AppScreens {
     GetPage(name: AppRoute.loginScreen, page: () => const LoginScreen()),
     GetPage(name: AppRoute.signupScreen, page: () => const SignUpScreen()),
     GetPage(name: AppRoute.homeScreen, page: () => const HomeScreen()),
+    GetPage(name: AppRoute.detailsScreen, page: () => const DetailsScreen()),
   ];
 }

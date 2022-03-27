@@ -4,4 +4,5 @@ class AppRoute {
   static const loginScreen = '/Login_Screen';
   static const signupScreen = '/Signup_Screen';
   static const homeScreen = '/Home_Screen';
+  static const detailsScreen = '/Details_Screen';
 }

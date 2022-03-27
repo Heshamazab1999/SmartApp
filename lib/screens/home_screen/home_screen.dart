@@ -1,5 +1,6 @@
 import 'package:education_app/components/search_text_field.dart';
 import 'package:education_app/constants.dart';
+import 'package:education_app/routes/app_route.dart';
 import 'package:education_app/screens/home_screen/controller/home_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -72,10 +73,15 @@ class HomeScreen extends StatelessWidget {
                 itemCount: 8,
                 itemBuilder: (BuildContext context, int index) => Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                            color: K.blackColor,
-                            borderRadius: BorderRadius.circular(15)),
+                      child: GestureDetector(
+                        onTap: () {
+                          Get.toNamed(AppRoute.detailsScreen,);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              color: K.blackColor,
+                              borderRadius: BorderRadius.circular(15)),
+                        ),
                       ),
                     )),
           ],

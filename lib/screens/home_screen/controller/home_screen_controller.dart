@@ -4,7 +4,7 @@ import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 class HomeScreenController extends BaseController {
   YoutubePlayerController controller = YoutubePlayerController(
     initialVideoId: 'iLnmTe5Q2Qw',
-    flags: YoutubePlayerFlags(
+    flags: const YoutubePlayerFlags(
       autoPlay: true,
       mute: true,
     ),
