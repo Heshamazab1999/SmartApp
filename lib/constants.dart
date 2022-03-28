@@ -7,6 +7,7 @@ class K {
   static const whiteColor = Color(0xffFAFAFA);
   static const blackColor = Color(0xff333333);
   static const greyColor = Color(0xff8E8E93);
+  static const peColor = Color(0xff5E53E0);
   static final width = Get.width;
   static final height = Get.height;
 }

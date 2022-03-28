@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: () => GetMaterialApp(
               debugShowCheckedModeBanner: false,
-              initialRoute: AppRoute.detailsScreen,
+              initialRoute: AppRoute.onBoardingScreen,
               getPages: AppScreens.screens,
             ));
   }

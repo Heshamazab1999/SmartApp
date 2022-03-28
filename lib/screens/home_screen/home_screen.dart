@@ -1,6 +1,7 @@
 import 'package:education_app/components/search_text_field.dart';
 import 'package:education_app/constants.dart';
 import 'package:education_app/routes/app_route.dart';
+import 'package:education_app/screens/details_screen/details_screen.dart';
 import 'package:education_app/screens/home_screen/controller/home_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -75,7 +76,9 @@ class HomeScreen extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: GestureDetector(
                         onTap: () {
-                          Get.toNamed(AppRoute.detailsScreen,);
+                          Get.to(() => const DetailsScreen(),
+                              transition: Transition.zoom,
+                              duration: const Duration(milliseconds: 500));
                         },
                         child: Container(
                           decoration: BoxDecoration(
